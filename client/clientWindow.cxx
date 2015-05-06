@@ -23,6 +23,16 @@ ClientWindow::ClientWindow(QWidget *parent) : QMainWindow(parent) {
 // Méthode au clic du bouton "connexion"
 void ClientWindow::on_loginButton_clicked() {
     socket->connectToHost(serverLineEdit->text(), 4200); // Connexion au port 4200 à l'adresse demandé
+    QString user = userLineEdit->text();
+    QString image = "user";
+    if(btn_bitcoin->isCheked()) image = "bitcoin";
+    if(btn_fusee->isCheked()) image = "fusee";
+    if(btn_github->isCheked()) image = "github";
+    if(btn_bug->isCheked()) image = "bug";
+    if(btn_apple>isCheked()) image = "apple";
+    if(btn_android>isCheked()) image = "android";
+
+    user_images[user] = image;
 }
 
 // Méthode au clic du bouton "envoi"
@@ -62,7 +72,9 @@ void ClientWindow::readyRead() {
 	    int i = 0;
             // On ajoute l'utilisateur dans la liste avec l'image
             foreach(QString user, users) {
-                new QListWidgetItem(QPixmap(":/user.png"), user, userListWidget);
+		QString image = user_images[user];
+		qDebug("image : "+ image);
+                new QListWidgetItem(QPixmap(":/" + image +".png"), user, userListWidget);
 
 	    	// Change color
 	    	user_colors[user] = colors.at(i);

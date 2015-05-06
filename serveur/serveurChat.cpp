@@ -31,14 +31,16 @@ void ChatServeur::readyRead() {
 	// trimmed() enlève les espaces en trop
         QString line = QString::fromUtf8(client->readLine()).trimmed();
 
-	// Si le texte répond à la regex "/moi" => connexion d'un client
+	// Si le texte répond à la regex "/moi..../image" => connexion d'un client
         QRegExp meRegex("^/moi:(.*)/image:(.*)$");
 
 	// Si connexion
         if(meRegex.indexIn(line) != -1) {
-	    // Ajout du client dans la liste
+	    // Récupération de l'utilisateur
             QString user = meRegex.cap(1);
             users[client] = user;
+
+	    // Récupération de l'image de l'utilisateur
 	    user_images[user] = meRegex.cap(2);
 
 	    // On envoi à tous utilisateurs la connexon du client 
@@ -87,11 +89,12 @@ void ChatServeur::sendUserList() {
     foreach(QString user, users.values())
         userList << user;
 
+    // Mise à jour des images des clients connectés
     QStringList images;
     foreach(QString image, user_images.values())
 	images << image;
 
-    // Mise à jour de la liste des utilisateurs
+    // Mise à jour de la liste des utilisateurs et leurs images
     foreach(QTcpSocket *client, clients)
         client->write(QString("/users:" + userList.join(",") + "/images:" + images.join(",") + "\n").toUtf8());
 }

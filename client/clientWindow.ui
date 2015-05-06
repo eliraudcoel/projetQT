@@ -74,7 +74,7 @@ border-radius: 10px;
        <item>
         <widget class="QStackedWidget" name="stackedWidget">
          <property name="currentIndex">
-          <number>1</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="chatPage">
           <layout class="QGridLayout" name="gridLayout">
@@ -96,8 +96,8 @@ border-radius: 10px;
               <string/>
              </property>
              <property name="icon">
-              <iconset>
-               <normaloff>envoi.png</normaloff>envoi.png</iconset>
+              <iconset resource="images.qrc">
+               <normaloff>:/images/envoi.png</normaloff>:/images/envoi.png</iconset>
              </property>
              <property name="iconSize">
               <size>
@@ -164,8 +164,8 @@ border-radius: 10px;
                  <string/>
                 </property>
                 <property name="icon">
-                 <iconset>
-                  <normaloff>bug.png</normaloff>bug.png</iconset>
+                 <iconset resource="images.qrc">
+                  <normaloff>:/images/bug.png</normaloff>:/images/bug.png</iconset>
                 </property>
                </widget>
               </item>
@@ -188,8 +188,8 @@ border-radius: 10px;
                  <string/>
                 </property>
                 <property name="icon">
-                 <iconset>
-                  <normaloff>bitcoin.png</normaloff>bitcoin.png</iconset>
+                 <iconset resource="images.qrc">
+                  <normaloff>:/images/bitcoin.png</normaloff>:/images/bitcoin.png</iconset>
                 </property>
                </widget>
               </item>
@@ -205,8 +205,8 @@ border-radius: 10px;
                  <string/>
                 </property>
                 <property name="icon">
-                 <iconset>
-                  <normaloff>fusee.png</normaloff>fusee.png</iconset>
+                 <iconset resource="images.qrc">
+                  <normaloff>:/images/fusee.png</normaloff>:/images/fusee.png</iconset>
                 </property>
                </widget>
               </item>
@@ -229,8 +229,8 @@ border-radius: 10px;
                  <string/>
                 </property>
                 <property name="icon">
-                 <iconset>
-                  <normaloff>android.png</normaloff>android.png</iconset>
+                 <iconset resource="images.qrc">
+                  <normaloff>:/images/android.png</normaloff>:/images/android.png</iconset>
                 </property>
                </widget>
               </item>
@@ -246,8 +246,8 @@ border-radius: 10px;
                  <string/>
                 </property>
                 <property name="icon">
-                 <iconset>
-                  <normaloff>apple.png</normaloff>apple.png</iconset>
+                 <iconset resource="images.qrc">
+                  <normaloff>:/images/apple.png</normaloff>:/images/apple.png</iconset>
                 </property>
                </widget>
               </item>
@@ -263,8 +263,8 @@ border-radius: 10px;
                  <string/>
                 </property>
                 <property name="icon">
-                 <iconset>
-                  <normaloff>github.png</normaloff>github.png</iconset>
+                 <iconset resource="images.qrc">
+                  <normaloff>:/images/github.png</normaloff>:/images/github.png</iconset>
                 </property>
                </widget>
               </item>
@@ -377,7 +377,9 @@ border-radius: 10px;
   <tabstop>sayLineEdit</tabstop>
   <tabstop>sayButton</tabstop>
  </tabstops>
- <resources/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>sayLineEdit</sender>

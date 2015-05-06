@@ -613,7 +613,68 @@ moc_clientWindow.cpp: /trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QMainWindo
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtNetwork/QTcpSocket \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtNetwork/qtcpsocket.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtNetwork/qabstractsocket.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/QStringList \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/QString \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/QMap \
 		ui_clientWindow.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/QVariant \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QAction \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qaction.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qactiongroup.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QApplication \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qapplication.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qcoreapplication.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qeventloop.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qdesktopwidget.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qguiapplication.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qinputmethod.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QButtonGroup \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qbuttongroup.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QFrame \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qframe.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QGridLayout \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qgridlayout.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qlayout.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qlayoutitem.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qboxlayout.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QHeaderView \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qheaderview.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qabstractitemview.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qabstractscrollarea.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qabstractitemmodel.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qitemselectionmodel.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qabstractitemdelegate.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qstyleoption.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qabstractspinbox.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qvalidator.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qregularexpression.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qslider.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qabstractslider.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qstyle.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qtabbar.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qrubberband.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QLabel \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qlabel.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QLineEdit \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qlineedit.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qtextcursor.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qtextformat.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qpen.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qtextoption.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QListWidget \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qlistwidget.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qlistview.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QPushButton \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qpushbutton.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qabstractbutton.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QSpacerItem \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QStackedWidget \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qstackedwidget.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QTextEdit \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qtextedit.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qtextdocument.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QVBoxLayout \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QWidget \
 		clientWindow.h
 	/trav/invite/qt-5.4.1/5.4/gcc/bin/moc $(DEFINES) -I/trav/invite/qt-5.4.1/5.4/gcc/mkspecs/linux-g++ -I/home/invite/EPSI/projetQT/client -I/home/invite/EPSI/projetQT/client -I/trav/invite/qt-5.4.1/5.4/gcc/include -I/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets -I/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui -I/trav/invite/qt-5.4.1/5.4/gcc/include/QtNetwork -I/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore clientWindow.h -o moc_clientWindow.cpp
 
@@ -744,14 +805,68 @@ clientMain.o: clientMain.cpp clientWindow.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtNetwork/QTcpSocket \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtNetwork/qtcpsocket.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtNetwork/qabstractsocket.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/QStringList \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/QString \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/QMap \
 		ui_clientWindow.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/QVariant \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QAction \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qaction.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qactiongroup.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QApplication \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qapplication.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qcoreapplication.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qeventloop.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qdesktopwidget.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qguiapplication.h \
-		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qinputmethod.h
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qinputmethod.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QButtonGroup \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qbuttongroup.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QFrame \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qframe.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QGridLayout \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qgridlayout.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qlayout.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qlayoutitem.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qboxlayout.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QHeaderView \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qheaderview.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qabstractitemview.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qabstractscrollarea.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qabstractitemmodel.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qitemselectionmodel.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qabstractitemdelegate.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qstyleoption.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qabstractspinbox.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qvalidator.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qregularexpression.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qslider.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qabstractslider.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qstyle.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qtabbar.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qrubberband.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QLabel \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qlabel.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QLineEdit \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qlineedit.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qtextcursor.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qtextformat.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qpen.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qtextoption.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QListWidget \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qlistwidget.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qlistview.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QPushButton \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qpushbutton.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qabstractbutton.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QSpacerItem \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QStackedWidget \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qstackedwidget.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QTextEdit \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qtextedit.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qtextdocument.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QVBoxLayout \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o clientMain.o clientMain.cpp
 
 clientWindow.o: clientWindow.cxx clientWindow.h \
@@ -863,7 +978,68 @@ clientWindow.o: clientWindow.cxx clientWindow.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtNetwork/QTcpSocket \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtNetwork/qtcpsocket.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtNetwork/qabstractsocket.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/QStringList \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/QString \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/QMap \
 		ui_clientWindow.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/QVariant \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QAction \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qaction.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qactiongroup.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QApplication \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qapplication.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qcoreapplication.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qeventloop.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qdesktopwidget.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qguiapplication.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qinputmethod.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QButtonGroup \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qbuttongroup.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QFrame \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qframe.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QGridLayout \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qgridlayout.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qlayout.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qlayoutitem.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qboxlayout.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QHeaderView \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qheaderview.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qabstractitemview.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qabstractscrollarea.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qabstractitemmodel.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qitemselectionmodel.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qabstractitemdelegate.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qstyleoption.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qabstractspinbox.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qvalidator.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qregularexpression.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qslider.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qabstractslider.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qstyle.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qtabbar.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qrubberband.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QLabel \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qlabel.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QLineEdit \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qlineedit.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qtextcursor.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qtextformat.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qpen.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qtextoption.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QListWidget \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qlistwidget.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qlistview.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QPushButton \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qpushbutton.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qabstractbutton.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QSpacerItem \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QStackedWidget \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qstackedwidget.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QTextEdit \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qtextedit.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qtextdocument.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QVBoxLayout \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QWidget \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/QRegExp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o clientWindow.o clientWindow.cxx
 

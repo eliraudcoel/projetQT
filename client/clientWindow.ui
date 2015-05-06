@@ -74,7 +74,7 @@ border-radius: 10px;
        <item>
         <widget class="QStackedWidget" name="stackedWidget">
          <property name="currentIndex">
-          <number>0</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="chatPage">
           <layout class="QGridLayout" name="gridLayout">
@@ -152,35 +152,143 @@ border-radius: 10px;
               <property name="spacing">
                <number>20</number>
               </property>
-              <item row="0" column="0">
-               <widget class="QLabel" name="label">
+              <item row="0" column="4">
+               <widget class="QRadioButton" name="btn_bug">
+                <property name="maximumSize">
+                 <size>
+                  <width>50</width>
+                  <height>50</height>
+                 </size>
+                </property>
                 <property name="text">
-                 <string>Adresse serveur</string>
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>bug.png</normaloff>bug.png</iconset>
                 </property>
                </widget>
               </item>
-              <item row="0" column="1">
-               <widget class="QLineEdit" name="serverLineEdit">
-                <property name="placeholderText">
-                 <string>ex : 192.168.1.38</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="0">
+              <item row="2" column="0">
                <widget class="QLabel" name="label_2">
                 <property name="text">
                  <string>Pseudo</string>
                 </property>
                </widget>
               </item>
-              <item row="1" column="1">
+              <item row="0" column="0">
+               <widget class="QRadioButton" name="btn_bitcoin">
+                <property name="maximumSize">
+                 <size>
+                  <width>50</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>bitcoin.png</normaloff>bitcoin.png</iconset>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QRadioButton" name="btn_fusee">
+                <property name="maximumSize">
+                 <size>
+                  <width>50</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>fusee.png</normaloff>fusee.png</iconset>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0" colspan="2">
+               <widget class="QLabel" name="label">
+                <property name="text">
+                 <string>Adresse serveur</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QRadioButton" name="btn_android">
+                <property name="maximumSize">
+                 <size>
+                  <width>50</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>android.png</normaloff>android.png</iconset>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="5">
+               <widget class="QRadioButton" name="btn_apple">
+                <property name="maximumSize">
+                 <size>
+                  <width>50</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>apple.png</normaloff>apple.png</iconset>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QRadioButton" name="btn_github">
+                <property name="maximumSize">
+                 <size>
+                  <width>60</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>github.png</normaloff>github.png</iconset>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="3" colspan="3">
+               <widget class="QLineEdit" name="serverLineEdit">
+                <property name="maximumSize">
+                 <size>
+                  <width>250</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="placeholderText">
+                 <string>ex : 192.168.1.38</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="3" colspan="3">
                <widget class="QLineEdit" name="userLineEdit">
                 <property name="placeholderText">
                  <string>ex : superPseudo</string>
                 </property>
                </widget>
               </item>
-              <item row="2" column="1">
+              <item row="3" column="4" colspan="2">
                <widget class="QPushButton" name="loginButton">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">

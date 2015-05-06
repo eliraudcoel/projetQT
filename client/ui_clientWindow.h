@@ -127,7 +127,7 @@ public:
         sayButton->setSizePolicy(sizePolicy1);
         sayButton->setMaximumSize(QSize(25, 25));
         QIcon icon;
-        icon.addFile(QStringLiteral("envoi.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QStringLiteral(":/images/envoi.png"), QSize(), QIcon::Normal, QIcon::Off);
         sayButton->setIcon(icon);
         sayButton->setIconSize(QSize(25, 25));
 
@@ -172,7 +172,7 @@ public:
         btn_bug->setObjectName(QStringLiteral("btn_bug"));
         btn_bug->setMaximumSize(QSize(50, 50));
         QIcon icon1;
-        icon1.addFile(QStringLiteral("bug.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon1.addFile(QStringLiteral(":/images/bug.png"), QSize(), QIcon::Normal, QIcon::Off);
         btn_bug->setIcon(icon1);
 
         gridLayout_2->addWidget(btn_bug, 0, 4, 1, 1);
@@ -186,7 +186,7 @@ public:
         btn_bitcoin->setObjectName(QStringLiteral("btn_bitcoin"));
         btn_bitcoin->setMaximumSize(QSize(50, 50));
         QIcon icon2;
-        icon2.addFile(QStringLiteral("bitcoin.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon2.addFile(QStringLiteral(":/images/bitcoin.png"), QSize(), QIcon::Normal, QIcon::Off);
         btn_bitcoin->setIcon(icon2);
 
         gridLayout_2->addWidget(btn_bitcoin, 0, 0, 1, 1);
@@ -195,7 +195,7 @@ public:
         btn_fusee->setObjectName(QStringLiteral("btn_fusee"));
         btn_fusee->setMaximumSize(QSize(50, 50));
         QIcon icon3;
-        icon3.addFile(QStringLiteral("fusee.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon3.addFile(QStringLiteral(":/images/fusee.png"), QSize(), QIcon::Normal, QIcon::Off);
         btn_fusee->setIcon(icon3);
 
         gridLayout_2->addWidget(btn_fusee, 0, 1, 1, 1);
@@ -209,7 +209,7 @@ public:
         btn_android->setObjectName(QStringLiteral("btn_android"));
         btn_android->setMaximumSize(QSize(50, 50));
         QIcon icon4;
-        icon4.addFile(QStringLiteral("android.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon4.addFile(QStringLiteral(":/images/android.png"), QSize(), QIcon::Normal, QIcon::Off);
         btn_android->setIcon(icon4);
 
         gridLayout_2->addWidget(btn_android, 0, 3, 1, 1);
@@ -218,7 +218,7 @@ public:
         btn_apple->setObjectName(QStringLiteral("btn_apple"));
         btn_apple->setMaximumSize(QSize(50, 50));
         QIcon icon5;
-        icon5.addFile(QStringLiteral("apple.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon5.addFile(QStringLiteral(":/images/apple.png"), QSize(), QIcon::Normal, QIcon::Off);
         btn_apple->setIcon(icon5);
 
         gridLayout_2->addWidget(btn_apple, 0, 5, 1, 1);
@@ -227,7 +227,7 @@ public:
         btn_github->setObjectName(QStringLiteral("btn_github"));
         btn_github->setMaximumSize(QSize(60, 50));
         QIcon icon6;
-        icon6.addFile(QStringLiteral("github.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon6.addFile(QStringLiteral(":/images/github.png"), QSize(), QIcon::Normal, QIcon::Off);
         btn_github->setIcon(icon6);
 
         gridLayout_2->addWidget(btn_github, 0, 2, 1, 1);
@@ -288,7 +288,7 @@ public:
         QObject::connect(serverLineEdit, SIGNAL(returnPressed()), userLineEdit, SLOT(setFocus()));
         QObject::connect(userLineEdit, SIGNAL(returnPressed()), loginButton, SLOT(animateClick()));
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);

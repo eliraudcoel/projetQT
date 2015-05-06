@@ -15,11 +15,10 @@ ClientWindow::ClientWindow(QWidget *parent) : QMainWindow(parent) {
     connect(socket, SIGNAL(readyRead()), this, SLOT(readyRead()));
     connect(socket, SIGNAL(connected()), this, SLOT(connected()));
 
+    // Implémentation des couleurs
     colors << "#E93A3A" << "#E93AB2" << "#B53AE9" << "#5A3AE9"
 	   << "#3A95E9" << "#3AE9D8" << "#3AE980" << "#6CE93A"
 	   << "#C3E93A" << "#E9AC3A" << "#E9803A" << "#E9433A";
-
-    // images "bitcoin" << "fusee" << "github" << "bug" << "apple" << "android";
 }
 
 // Méthode au clic du bouton "connexion"
@@ -35,7 +34,7 @@ void ClientWindow::on_loginButton_clicked() {
     if(btn_apple->isChecked()) image = "apple";
     if(btn_android->isChecked()) image = "android";
 
-    user_images[user] = image;
+    user_image = image;
 }
 
 // Méthode au clic du bouton "envoi"
@@ -64,20 +63,21 @@ void ClientWindow::readyRead() {
         // Reconnaissance Message : "pseudo:message"
         QRegExp messageRegex("^([^:]+):(.*)$");
 
-        // Reconnaissance de "/users" qui représentent la liste des utilisateurs
+        // Reconnaissance de "/users.../images" qui représentent la liste des utilisateurs et leurs images
         QRegExp usersRegex("^/users:(.*)/images:(.*)$");
 
 	// Message d'un nouvel utilisateur
         if(usersRegex.indexIn(line) != -1) {
+	    // On sauvegarder les utilisateurs
             QStringList users = usersRegex.cap(1).split(",");
+	    // On sauvegarder les images des utilisateurs
 	    QStringList images = usersRegex.cap(2).split(",");
 
             userListWidget->clear();
-
 	    int i = 0;
+
             // On ajoute l'utilisateur dans la liste avec l'image
             foreach(QString user, users) {
-		// QString image = user_images[user];
 		QString image = images.at(i);
                 new QListWidgetItem(QPixmap(":/images/" + image +".png"), user, userListWidget);
 
@@ -88,12 +88,11 @@ void ClientWindow::readyRead() {
 
         }
 	// Message d'un utilisateur
-        else if(messageRegex.indexIn(line) != -1)
-        {
+        else if(messageRegex.indexIn(line) != -1) {
             QString user = messageRegex.cap(1);
             QString message = messageRegex.cap(2);
 	    
-	    QString color = "<font color=\""+user_colors[user]+"\">";
+	    QString color = "<font color=\"" + user_colors[user] + "\">";
 	    QString end_color = "</font>";
             roomTextEdit->append(color + "<b>" + user + "</b>: " + message + end_color);
         }
@@ -107,6 +106,6 @@ void ClientWindow::connected() {
 
     QString user = userLineEdit->text();
 
-    // Envoi du pseudo du nouvel utilisateur au serveur
-    socket->write(QString("/moi:" + user + "/image:" + user_images[user] + "\n").toUtf8());
+    // Envoi du pseudo et l'image du nouvel utilisateur au serveur
+    socket->write(QString("/moi:" + user + "/image:" + user_image + "\n").toUtf8());
 }

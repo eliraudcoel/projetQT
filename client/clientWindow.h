@@ -22,5 +22,5 @@ class ClientWindow : public QMainWindow, public Ui::MainWindow {
         QTcpSocket *socket;
 	QStringList colors;
         QMap<QString,QString> user_colors; // stockage des utilisateurs : [socket TCP, Couleur]
-        QMap<QString,QString> user_images; // stockage des utilisateurs : [socket TCP, Image]
+        QString user_image; // stockage de l'image de l'utilisateur
 };

@@ -20,7 +20,7 @@ void ChatServeur::incomingConnection(int socketfd) {
     connect(client, SIGNAL(disconnected()), this, SLOT(disconnected()));
 }
 
-// Réception des message
+// Réception des messages
 void ChatServeur::readyRead() {
     // Récupération de la socket TCP du client
     QTcpSocket *client = (QTcpSocket*)sender();

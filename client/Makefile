@@ -613,6 +613,7 @@ moc_clientWindow.cpp: /trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QMainWindo
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtNetwork/QTcpSocket \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtNetwork/qtcpsocket.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtNetwork/qabstractsocket.h \
+		ui_clientWindow.h \
 		clientWindow.h
 	/trav/invite/qt-5.4.1/5.4/gcc/bin/moc $(DEFINES) -I/trav/invite/qt-5.4.1/5.4/gcc/mkspecs/linux-g++ -I/home/invite/EPSI/projetQT/client -I/home/invite/EPSI/projetQT/client -I/trav/invite/qt-5.4.1/5.4/gcc/include -I/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets -I/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui -I/trav/invite/qt-5.4.1/5.4/gcc/include/QtNetwork -I/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore clientWindow.h -o moc_clientWindow.cpp
 
@@ -634,9 +635,11 @@ compiler_clean: compiler_rcc_clean compiler_moc_header_clean compiler_uic_clean
 
 ####### Compile
 
-clientMain.o: clientMain.cpp /trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QApplication \
-		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qapplication.h \
-		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qcoreapplication.h \
+clientMain.o: clientMain.cpp clientWindow.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QMainWindow \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qmainwindow.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qwidget.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qwindowdefs.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qglobal.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qconfig.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qfeatures.h \
@@ -665,16 +668,17 @@ clientMain.o: clientMain.cpp /trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QAp
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qglobalstatic.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qmutex.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qnumeric.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qobjectdefs.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qnamespace.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qobjectdefs_impl.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qwindowdefs_win.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qobject.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qstring.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qchar.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qbytearray.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qrefcount.h \
-		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qnamespace.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qarraydata.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qstringbuilder.h \
-		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qobject.h \
-		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qobjectdefs.h \
-		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qobjectdefs_impl.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qlist.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qalgorithms.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qiterator.h \
@@ -686,17 +690,11 @@ clientMain.o: clientMain.cpp /trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QAp
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qcontainerfwd.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qisenum.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qobject_impl.h \
-		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qeventloop.h \
-		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qwindowdefs.h \
-		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qwindowdefs_win.h \
-		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qpoint.h \
-		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qsize.h \
-		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qcursor.h \
-		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qdesktopwidget.h \
-		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qwidget.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qmargins.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qpaintdevice.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qrect.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qsize.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qpoint.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qpalette.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qcolor.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qrgb.h \
@@ -725,6 +723,7 @@ clientMain.o: clientMain.cpp /trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QAp
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qfontmetrics.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qfontinfo.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qsizepolicy.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qcursor.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qkeysequence.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qevent.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qvariant.h \
@@ -740,12 +739,26 @@ clientMain.o: clientMain.cpp /trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QAp
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qfiledevice.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qvector2d.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qtouchdevice.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qtabwidget.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qicon.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtNetwork/QTcpSocket \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtNetwork/qtcpsocket.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtNetwork/qabstractsocket.h \
+		ui_clientWindow.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QApplication \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qapplication.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qcoreapplication.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qeventloop.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qdesktopwidget.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qguiapplication.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qinputmethod.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o clientMain.o clientMain.cpp
 
-clientWindow.o: clientWindow.cxx /trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/QRegExp \
-		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qregexp.h \
+clientWindow.o: clientWindow.cxx clientWindow.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/QMainWindow \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qmainwindow.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qwidget.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qwindowdefs.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qglobal.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qconfig.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qfeatures.h \
@@ -774,13 +787,84 @@ clientWindow.o: clientWindow.cxx /trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/QR
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qglobalstatic.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qmutex.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qnumeric.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qobjectdefs.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qnamespace.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qobjectdefs_impl.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qwindowdefs_win.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qobject.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qstring.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qchar.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qbytearray.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qrefcount.h \
-		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qnamespace.h \
 		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qarraydata.h \
-		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qstringbuilder.h
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qstringbuilder.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qlist.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qalgorithms.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qiterator.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qbytearraylist.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qcoreevent.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qscopedpointer.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qmetatype.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qvarlengtharray.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qcontainerfwd.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qisenum.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qobject_impl.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qmargins.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qpaintdevice.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qrect.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qsize.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qpoint.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qpalette.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qcolor.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qrgb.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qstringlist.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qdatastream.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qiodevice.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qpair.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qregexp.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qstringmatcher.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qbrush.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qvector.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qmatrix.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qpolygon.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qregion.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qline.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qtransform.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qpainterpath.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qimage.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qpixelformat.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qpixmap.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qsharedpointer.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qshareddata.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qhash.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qsharedpointer_impl.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qfont.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qfontmetrics.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qfontinfo.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qsizepolicy.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qcursor.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qkeysequence.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qevent.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qvariant.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qmap.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qdebug.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qtextstream.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qlocale.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qset.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qcontiguouscache.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qurl.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qurlquery.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qfile.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/qfiledevice.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qvector2d.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qtouchdevice.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtWidgets/qtabwidget.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtGui/qicon.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtNetwork/QTcpSocket \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtNetwork/qtcpsocket.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtNetwork/qabstractsocket.h \
+		ui_clientWindow.h \
+		/trav/invite/qt-5.4.1/5.4/gcc/include/QtCore/QRegExp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o clientWindow.o clientWindow.cxx
 
 qrc_images.o: qrc_images.cpp 

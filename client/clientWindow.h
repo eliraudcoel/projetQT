@@ -1,6 +1,9 @@
 // Importations
 #include <QMainWindow>
 #include <QTcpSocket>
+#include <QStringList>
+#include <QString>
+#include <QMap>
 #include "ui_clientWindow.h"
 
 class ClientWindow : public QMainWindow, public Ui::MainWindow {
@@ -17,4 +20,6 @@ class ClientWindow : public QMainWindow, public Ui::MainWindow {
 
     private:
         QTcpSocket *socket;
+	QStringList colors;
+        QMap<QString,QString> user_colors; // stockage des utilisateurs : [socket TCP, Couleur]
 };

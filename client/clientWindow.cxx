@@ -14,12 +14,15 @@ ClientWindow::ClientWindow(QWidget *parent) : QMainWindow(parent) {
     // Implémentation des SLOTS
     connect(socket, SIGNAL(readyRead()), this, SLOT(readyRead()));
     connect(socket, SIGNAL(connected()), this, SLOT(connected()));
+
+    colors << "#E93A3A" << "#E93AB2" << "#B53AE9" << "#5A3AE9"
+	   << "#3A95E9" << "#3AE9D8" << "#3AE980" << "#6CE93A"
+	   << "#C3E93A" << "#E9AC3A" << "#E9803A" << "#E9433A";
 }
 
 // Méthode au clic du bouton "connexion"
 void ClientWindow::on_loginButton_clicked() {
-    // Connexion au port 4200 à l'adresse demandé
-    socket->connectToHost(serverLineEdit->text(), 4200);
+    socket->connectToHost(serverLineEdit->text(), 4200); // Connexion au port 4200 à l'adresse demandé
 }
 
 // Méthode au clic du bouton "envoi"
@@ -56,17 +59,26 @@ void ClientWindow::readyRead() {
             QStringList users = usersRegex.cap(1).split(",");
             userListWidget->clear();
 
+	    int i = 0;
             // On ajoute l'utilisateur dans la liste avec l'image
-            foreach(QString user, users)
+            foreach(QString user, users) {
                 new QListWidgetItem(QPixmap(":/user.png"), user, userListWidget);
+
+	    	// Change color
+	    	user_colors[user] = colors.at(i);
+		i++;
+	    }
+
         }
 	// Message d'un utilisateur
         else if(messageRegex.indexIn(line) != -1)
         {
             QString user = messageRegex.cap(1);
             QString message = messageRegex.cap(2);
-
-            roomTextEdit->append("<b>" + user + "</b>: " + message);
+	    
+	    QString color = "<font color=\""+user_colors[user]+"\">";
+	    QString end_color = "</font>";
+            roomTextEdit->append(color + "<b>" + user + "</b>: " + message + end_color);
         }
     }
 }

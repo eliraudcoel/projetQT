@@ -18,11 +18,14 @@ ClientWindow::ClientWindow(QWidget *parent) : QMainWindow(parent) {
     colors << "#E93A3A" << "#E93AB2" << "#B53AE9" << "#5A3AE9"
 	   << "#3A95E9" << "#3AE9D8" << "#3AE980" << "#6CE93A"
 	   << "#C3E93A" << "#E9AC3A" << "#E9803A" << "#E9433A";
+
+    // images "bitcoin" << "fusee" << "github" << "bug" << "apple" << "android";
 }
 
 // Méthode au clic du bouton "connexion"
 void ClientWindow::on_loginButton_clicked() {
     socket->connectToHost(serverLineEdit->text(), 4200); // Connexion au port 4200 à l'adresse demandé
+
     QString user = userLineEdit->text();
     QString image = "user";
     if(btn_bitcoin->isChecked()) image = "bitcoin";
@@ -62,17 +65,20 @@ void ClientWindow::readyRead() {
         QRegExp messageRegex("^([^:]+):(.*)$");
 
         // Reconnaissance de "/users" qui représentent la liste des utilisateurs
-        QRegExp usersRegex("^/users:(.*)$");
+        QRegExp usersRegex("^/users:(.*)/images:(.*)$");
 
 	// Message d'un nouvel utilisateur
         if(usersRegex.indexIn(line) != -1) {
             QStringList users = usersRegex.cap(1).split(",");
+	    QStringList images = usersRegex.cap(2).split(",");
+
             userListWidget->clear();
 
 	    int i = 0;
             // On ajoute l'utilisateur dans la liste avec l'image
             foreach(QString user, users) {
-		QString image = user_images[user];
+		// QString image = user_images[user];
+		QString image = images.at(i);
                 new QListWidgetItem(QPixmap(":/images/" + image +".png"), user, userListWidget);
 
 	    	// Change color
@@ -99,6 +105,8 @@ void ClientWindow::connected() {
     // On ajoute à la page actuelle du chat
     stackedWidget->setCurrentWidget(chatPage);
 
+    QString user = userLineEdit->text();
+
     // Envoi du pseudo du nouvel utilisateur au serveur
-    socket->write(QString("/moi:" + userLineEdit->text() + "\n").toUtf8());
+    socket->write(QString("/moi:" + user + "/image:" + user_images[user] + "\n").toUtf8());
 }

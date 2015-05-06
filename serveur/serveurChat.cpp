@@ -32,13 +32,14 @@ void ChatServeur::readyRead() {
         QString line = QString::fromUtf8(client->readLine()).trimmed();
 
 	// Si le texte répond à la regex "/moi" => connexion d'un client
-        QRegExp meRegex("^/moi:(.*)$");
+        QRegExp meRegex("^/moi:(.*)/image:(.*)$");
 
 	// Si connexion
         if(meRegex.indexIn(line) != -1) {
 	    // Ajout du client dans la liste
             QString user = meRegex.cap(1);
             users[client] = user;
+	    user_images[user] = meRegex.cap(2);
 
 	    // On envoi à tous utilisateurs la connexon du client 
             foreach(QTcpSocket *client, clients)
@@ -86,7 +87,11 @@ void ChatServeur::sendUserList() {
     foreach(QString user, users.values())
         userList << user;
 
+    QStringList images;
+    foreach(QString image, user_images.values())
+	images << image;
+
     // Mise à jour de la liste des utilisateurs
     foreach(QTcpSocket *client, clients)
-        client->write(QString("/users:" + userList.join(",") + "\n").toUtf8());
+        client->write(QString("/users:" + userList.join(",") + "/images:" + images.join(",") + "\n").toUtf8());
 }

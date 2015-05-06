@@ -22,4 +22,5 @@ class ChatServeur : public QTcpServer {
     private:
         QSet<QTcpSocket*> clients; // stockage des clients sous forme de socket TCP
         QMap<QTcpSocket*,QString> users; // stockage des utilisateurs : [socket TCP, Pseudo]
+        QMap<QString, QString> user_images; // stockage des utilisateurs : [socket TCP, Pseudo]
 };

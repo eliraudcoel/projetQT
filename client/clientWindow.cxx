@@ -73,7 +73,7 @@ void ClientWindow::readyRead() {
             // On ajoute l'utilisateur dans la liste avec l'image
             foreach(QString user, users) {
 		QString image = user_images[user];
-                new QListWidgetItem(QPixmap(":/" + image +".png"), user, userListWidget);
+                new QListWidgetItem(QPixmap(":/images/" + image +".png"), user, userListWidget);
 
 	    	// Change color
 	    	user_colors[user] = colors.at(i);

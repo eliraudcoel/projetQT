@@ -5,6 +5,13 @@ have to ship them with your program.
 -->
 <RCC>
   <qresource prefix="/" >
-    <file>user.png</file>
+    <file>images/android.png</file>
+    <file>images/apple.png</file>
+    <file>images/bitcoin.png</file>
+    <file>images/bug.png</file>
+    <file>images/envoi.png</file>
+    <file>images/fusee.png</file>
+    <file>images/github.png</file>
+    <file>images/user.png</file>
   </qresource>
 </RCC>

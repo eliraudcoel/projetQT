@@ -25,12 +25,12 @@ void ClientWindow::on_loginButton_clicked() {
     socket->connectToHost(serverLineEdit->text(), 4200); // Connexion au port 4200 à l'adresse demandé
     QString user = userLineEdit->text();
     QString image = "user";
-    if(btn_bitcoin->isCheked()) image = "bitcoin";
-    if(btn_fusee->isCheked()) image = "fusee";
-    if(btn_github->isCheked()) image = "github";
-    if(btn_bug->isCheked()) image = "bug";
-    if(btn_apple>isCheked()) image = "apple";
-    if(btn_android>isCheked()) image = "android";
+    if(btn_bitcoin->isChecked()) image = "bitcoin";
+    if(btn_fusee->isChecked()) image = "fusee";
+    if(btn_github->isChecked()) image = "github";
+    if(btn_bug->isChecked()) image = "bug";
+    if(btn_apple->isChecked()) image = "apple";
+    if(btn_android->isChecked()) image = "android";
 
     user_images[user] = image;
 }
@@ -73,7 +73,6 @@ void ClientWindow::readyRead() {
             // On ajoute l'utilisateur dans la liste avec l'image
             foreach(QString user, users) {
 		QString image = user_images[user];
-		qDebug("image : "+ image);
                 new QListWidgetItem(QPixmap(":/" + image +".png"), user, userListWidget);
 
 	    	// Change color

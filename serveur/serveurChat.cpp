@@ -1,13 +1,13 @@
 // Importatins
-#include "ChatterBoxServer.h"
+#include "serveurChat.h"
 #include <QTcpSocket>
 #include <QRegExp>
 
 // Constructeur sans argument
-ChatterBoxServer::ChatterBoxServer(QObject *parent) : QTcpServer(parent) { }
+ChatServeur::ChatServeur(QObject *parent) : QTcpServer(parent) { }
 
 // Méthode de réception des messages et aiguillage (message/déconnexion)
-void ChatterBoxServer::incomingConnection(int socketfd) {
+void ChatServeur::incomingConnection(int socketfd) {
     // Creation d'une socket TCP
     QTcpSocket *client = new QTcpSocket(this);
     client->setSocketDescriptor(socketfd);
@@ -21,7 +21,7 @@ void ChatterBoxServer::incomingConnection(int socketfd) {
 }
 
 // Réception des message
-void ChatterBoxServer::readyRead() {
+void ChatServeur::readyRead() {
     // Récupération de la socket TCP du client
     QTcpSocket *client = (QTcpSocket*)sender();
 
@@ -62,7 +62,7 @@ void ChatterBoxServer::readyRead() {
 }
 
 // Méthode de deconnexion d'un utilisateur
-void ChatterBoxServer::disconnected() {
+void ChatServeur::disconnected() {
     // on récupère le client dans notre liste pour le supprimer
     QTcpSocket *client = (QTcpSocket*)sender();
     clients.remove(client);
@@ -80,7 +80,7 @@ void ChatterBoxServer::disconnected() {
 }
 
 // Méhode d'envoi à la liste des utilisateurs
-void ChatterBoxServer::sendUserList() {
+void ChatServeur::sendUserList() {
     // Mise à jour des clients connectés
     QStringList userList;
     foreach(QString user, users.values())

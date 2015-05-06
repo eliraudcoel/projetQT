@@ -1,13 +1,13 @@
 /********************************************************************************
-** Form generated from reading UI file 'MainWindow.ui'
+** Form generated from reading UI file 'clientWindow.ui'
 **
 ** Created by: Qt User Interface Compiler version 5.4.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
 
-#ifndef UI_MAINWINDOW_H
-#define UI_MAINWINDOW_H
+#ifndef UI_CLIENTWINDOW_H
+#define UI_CLIENTWINDOW_H
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
@@ -118,7 +118,11 @@ public:
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(sayButton->sizePolicy().hasHeightForWidth());
         sayButton->setSizePolicy(sizePolicy1);
-        sayButton->setMaximumSize(QSize(50, 16777215));
+        sayButton->setMaximumSize(QSize(25, 25));
+        QIcon icon;
+        icon.addFile(QStringLiteral("envoi.png"), QSize(), QIcon::Normal, QIcon::Off);
+        sayButton->setIcon(icon);
+        sayButton->setIconSize(QSize(25, 25));
 
         gridLayout->addWidget(sayButton, 2, 2, 1, 1);
 
@@ -232,7 +236,7 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
         titleLabel->setText(QApplication::translate("MainWindow", "Chat", 0));
-        sayButton->setText(QApplication::translate("MainWindow", "Envoi", 0));
+        sayButton->setText(QString());
         label_3->setText(QApplication::translate("MainWindow", "Liste des utilisateurs", 0));
         label->setText(QApplication::translate("MainWindow", "Adresse serveur", 0));
         serverLineEdit->setPlaceholderText(QApplication::translate("MainWindow", "ex : 192.168.1.38", 0));
@@ -249,4 +253,4 @@ namespace Ui {
 
 QT_END_NAMESPACE
 
-#endif // UI_MAINWINDOW_H
+#endif // UI_CLIENTWINDOW_H

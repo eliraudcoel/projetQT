@@ -1,16 +1,16 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'MainWindow.h'
+** Meta object code from reading C++ file 'clientWindow.h'
 **
 ** Created by: The Qt Meta Object Compiler version 67 (Qt 5.4.1)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "MainWindow.h"
+#include "clientWindow.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'MainWindow.h' doesn't include <QObject>."
+#error "The header file 'clientWindow.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
 #error "This file was generated using the moc from 5.4.1. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -18,31 +18,32 @@
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
-struct qt_meta_stringdata_MainWindow_t {
+struct qt_meta_stringdata_ClientWindow_t {
     QByteArrayData data[6];
-    char stringdata[76];
+    char stringdata[78];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_MainWindow_t, stringdata) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_ClientWindow_t, stringdata) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_MainWindow = {
+static const qt_meta_stringdata_ClientWindow_t qt_meta_stringdata_ClientWindow = {
     {
-QT_MOC_LITERAL(0, 0, 10), // "MainWindow"
-QT_MOC_LITERAL(1, 11, 22), // "on_loginButton_clicked"
-QT_MOC_LITERAL(2, 34, 0), // ""
-QT_MOC_LITERAL(3, 35, 20), // "on_sayButton_clicked"
-QT_MOC_LITERAL(4, 56, 9), // "readyRead"
-QT_MOC_LITERAL(5, 66, 9) // "connected"
+QT_MOC_LITERAL(0, 0, 12), // "ClientWindow"
+QT_MOC_LITERAL(1, 13, 22), // "on_loginButton_clicked"
+QT_MOC_LITERAL(2, 36, 0), // ""
+QT_MOC_LITERAL(3, 37, 20), // "on_sayButton_clicked"
+QT_MOC_LITERAL(4, 58, 9), // "readyRead"
+QT_MOC_LITERAL(5, 68, 9) // "connected"
 
     },
-    "MainWindow\0on_loginButton_clicked\0\0"
-    "on_sayButton_clicked\0readyRead\0connected"
+    "ClientWindow\0on_loginButton_clicked\0"
+    "\0on_sayButton_clicked\0readyRead\0"
+    "connected"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_MainWindow[] = {
+static const uint qt_meta_data_ClientWindow[] = {
 
  // content:
        7,       // revision
@@ -70,10 +71,10 @@ static const uint qt_meta_data_MainWindow[] = {
        0        // eod
 };
 
-void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void ClientWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        MainWindow *_t = static_cast<MainWindow *>(_o);
+        ClientWindow *_t = static_cast<ClientWindow *>(_o);
         switch (_id) {
         case 0: _t->on_loginButton_clicked(); break;
         case 1: _t->on_sayButton_clicked(); break;
@@ -85,28 +86,28 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     Q_UNUSED(_a);
 }
 
-const QMetaObject MainWindow::staticMetaObject = {
-    { &QMainWindow::staticMetaObject, qt_meta_stringdata_MainWindow.data,
-      qt_meta_data_MainWindow,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
+const QMetaObject ClientWindow::staticMetaObject = {
+    { &QMainWindow::staticMetaObject, qt_meta_stringdata_ClientWindow.data,
+      qt_meta_data_ClientWindow,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
 };
 
 
-const QMetaObject *MainWindow::metaObject() const
+const QMetaObject *ClientWindow::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *MainWindow::qt_metacast(const char *_clname)
+void *ClientWindow::qt_metacast(const char *_clname)
 {
     if (!_clname) return Q_NULLPTR;
-    if (!strcmp(_clname, qt_meta_stringdata_MainWindow.stringdata))
-        return static_cast<void*>(const_cast< MainWindow*>(this));
+    if (!strcmp(_clname, qt_meta_stringdata_ClientWindow.stringdata))
+        return static_cast<void*>(const_cast< ClientWindow*>(this));
     if (!strcmp(_clname, "Ui::MainWindow"))
-        return static_cast< Ui::MainWindow*>(const_cast< MainWindow*>(this));
+        return static_cast< Ui::MainWindow*>(const_cast< ClientWindow*>(this));
     return QMainWindow::qt_metacast(_clname);
 }
 
-int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int ClientWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QMainWindow::qt_metacall(_c, _id, _a);
     if (_id < 0)

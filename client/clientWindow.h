@@ -1,13 +1,13 @@
 // Importations
 #include <QMainWindow>
 #include <QTcpSocket>
-#include "ui_MainWindow.h"
+#include "ui_clientWindow.h"
 
-class MainWindow : public QMainWindow, public Ui::MainWindow {
+class ClientWindow : public QMainWindow, public Ui::MainWindow {
     Q_OBJECT
 
     public:
-        MainWindow(QWidget *parent=0);
+        ClientWindow(QWidget *parent=0);
 
     private slots:
         void on_loginButton_clicked(); // Clic sur le bouton "connexion"

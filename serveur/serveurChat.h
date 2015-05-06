@@ -5,11 +5,11 @@
 #include <QMap>
 #include <QSet>
 
-class ChatterBoxServer : public QTcpServer {
+class ChatServeur : public QTcpServer {
     Q_OBJECT
 
     public:
-        ChatterBoxServer(QObject *parent=0);
+        ChatServeur(QObject *parent=0);
 
     private slots:
         void readyRead();

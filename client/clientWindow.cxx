@@ -1,9 +1,9 @@
 // importations
-#include "MainWindow.h"
+#include "clientWindow.h"
 #include <QRegExp>
 
 // Création de la fenetre principale
-MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
+ClientWindow::ClientWindow(QWidget *parent) : QMainWindow(parent) {
     // Affichage de la page de connexion
     setupUi(this);
     stackedWidget->setCurrentWidget(loginPage);
@@ -17,13 +17,13 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 }
 
 // Méthode au clic du bouton "connexion"
-void MainWindow::on_loginButton_clicked() {
+void ClientWindow::on_loginButton_clicked() {
     // Connexion au port 4200 à l'adresse demandé
     socket->connectToHost(serverLineEdit->text(), 4200);
 }
 
 // Méthode au clic du bouton "envoi"
-void MainWindow::on_sayButton_clicked() {
+void ClientWindow::on_sayButton_clicked() {
     // On récupère le message dans une variable QT
     // trimmed() => enlève les espaces en trop (début/fin)
     QString message = sayLineEdit->text().trimmed();
@@ -39,7 +39,7 @@ void MainWindow::on_sayButton_clicked() {
 }
 
 // Méthode de lecture
-void MainWindow::readyRead() {
+void ClientWindow::readyRead() {
     while(socket->canReadLine()) {
         // On récupère le message dans une variable QT
         // trimmed() => enlève les espaces en trop (début/fin)
@@ -72,7 +72,7 @@ void MainWindow::readyRead() {
 }
 
 // Méthode de connexion
-void MainWindow::connected() {
+void ClientWindow::connected() {
     // On ajoute à la page actuelle du chat
     stackedWidget->setCurrentWidget(chatPage);
 

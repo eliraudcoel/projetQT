@@ -1,5 +1,13 @@
+/****************************************************************************
+** Resource object code
+**
+** Created by: The Resource Compiler for Qt version 5.4.1
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
 static const unsigned char qt_resource_data[] = {
-  // /home/invite/Downloads/chat/client/chatterbox/user.png
+  // /home/invite/EPSI/projetQT/client/user.png
   0x0,0x0,0xc,0xb,
   0x89,
   0x50,0x4e,0x47,0xd,0xa,0x1a,0xa,0x0,0x0,0x0,0xd,0x49,0x48,0x44,0x52,0x0,
@@ -240,14 +248,16 @@ bool qUnregisterResourceData(int, const unsigned char *, const unsigned char *, 
 #endif
 
 int QT_RCC_MANGLE_NAMESPACE(qInitResources_images)();
-int QT_RCC_MANGLE_NAMESPACE(qInitResources_images)() {
+int QT_RCC_MANGLE_NAMESPACE(qInitResources_images)()
+{
     QT_RCC_PREPEND_NAMESPACE(qRegisterResourceData)
         (0x01, qt_resource_struct, qt_resource_name, qt_resource_data);
     return 1;
 }
 
 int QT_RCC_MANGLE_NAMESPACE(qCleanupResources_images)();
-int QT_RCC_MANGLE_NAMESPACE(qCleanupResources_images)() {
+int QT_RCC_MANGLE_NAMESPACE(qCleanupResources_images)()
+{
     QT_RCC_PREPEND_NAMESPACE(qUnregisterResourceData)
        (0x01, qt_resource_struct, qt_resource_name, qt_resource_data);
     return 1;

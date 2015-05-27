@@ -7,10 +7,12 @@
       => dossier du serveur
 
 ## Mise en place
-* Effectuer ```qmake -project``` dans les deux dossiers
-* Ajouter dans serveur.pro et client.pro ```QT += core gui network widgets``` dans les deux dossiers
-* Effectuer ```qmake``` dans les deux dossiers
-* Effectuer ```make``` dans les deux dossiers
+Dans les deux dossiers effectués les commandes suivantes :
+* Effectuer ```qmake -project```
+* Ajouter dans serveur.pro pour le dossier serveur ```QT += core gui network widgets```
+* Ajouter dans client.pro pour le dossier client ```QT += core gui network widgets```
+* Pour obtenir le Makefile taper ```qmake```
+* Et enfin exécuter le Makefile avec ```make```
 
 ## Exécution
 * Exécuter le serveur

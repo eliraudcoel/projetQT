@@ -13,6 +13,8 @@ void ChatServeur::incomingConnection(int socketfd) {
     client->setSocketDescriptor(socketfd);
     clients.insert(client);
 
+    qDebug() << "Nouveau Client:";
+
     // Creation du slot de lecture
     connect(client, SIGNAL(readyRead()), this, SLOT(readyRead()));
 
@@ -30,6 +32,8 @@ void ChatServeur::readyRead() {
         // Transformation du message en QString
 	// trimmed() enlève les espaces en trop
         QString line = QString::fromUtf8(client->readLine()).trimmed();
+
+	qDebug() << "Nouvelle ligne:" << line;
 
 	// Si le texte répond à la regex "/moi..../image" => connexion d'un client
         QRegExp meRegex("^/moi:(.*)/image:(.*)$");
@@ -54,6 +58,9 @@ void ChatServeur::readyRead() {
             QString message = line;
             QString user = users[client];
 
+	    qDebug() << "Utilisateur:" << user;
+            qDebug() << "Message:" << message;
+
 	    // On envoi à tous utilisateurs le message
             foreach(QTcpSocket *otherClient, clients)
                 otherClient->write(QString(user + ":" + message + "\n").toUtf8());
@@ -69,6 +76,8 @@ void ChatServeur::disconnected() {
     // on récupère le client dans notre liste pour le supprimer
     QTcpSocket *client = (QTcpSocket*)sender();
     clients.remove(client);
+
+    qDebug() << "Client déconnecté";
 
     // on récupère l'utilisateur dans notre liste pour le supprimer
     QString user = users[client];

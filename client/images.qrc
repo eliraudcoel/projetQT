@@ -1,8 +1,4 @@
-<!--
-This is your Qt resource file for images. It makes Qt
-bundle images directly into your executable so you don't
-have to ship them with your program.
--->
+<!-- Déclaration des images QT -->
 <RCC>
   <qresource prefix="/" >
     <file>images/android.png</file>
@@ -12,6 +8,5 @@ have to ship them with your program.
     <file>images/envoi.png</file>
     <file>images/fusee.png</file>
     <file>images/github.png</file>
-    <file>images/user.png</file>
   </qresource>
 </RCC>

@@ -25,16 +25,14 @@ ClientWindow::ClientWindow(QWidget *parent) : QMainWindow(parent) {
 void ClientWindow::on_loginButton_clicked() {
     socket->connectToHost(serverLineEdit->text(), 4200); // Connexion au port 4200 à l'adresse demandé
 
-    QString user = userLineEdit->text();
-    QString image = "user";
-    if(btn_bitcoin->isChecked()) image = "bitcoin";
-    if(btn_fusee->isChecked()) image = "fusee";
-    if(btn_github->isChecked()) image = "github";
-    if(btn_bug->isChecked()) image = "bug";
-    if(btn_apple->isChecked()) image = "apple";
-    if(btn_android->isChecked()) image = "android";
-
-    user_image = image;
+    // On stock l'image si l'utilisateur à cliquer sur un des boutons radios
+    if(btn_bitcoin->isChecked()) user_image = "bitcoin";
+    if(btn_fusee->isChecked()) user_image = "fusee";
+    if(btn_github->isChecked()) user_image = "github";
+    if(btn_bug->isChecked()) user_image = "bug";
+    if(btn_apple->isChecked()) user_image = "apple";
+    if(btn_android->isChecked()) user_image = "android";
+    else user_image = "android";
 }
 
 // Méthode au clic du bouton "envoi"
@@ -81,7 +79,7 @@ void ClientWindow::readyRead() {
 		QString image = images.at(i);
                 new QListWidgetItem(QPixmap(":/images/" + image +".png"), user, userListWidget);
 
-	    	// Change color
+	    	// On stocke l'image des différents utilisateurs
 	    	user_colors[user] = colors.at(i);
 		i++;
 	    }
@@ -89,9 +87,11 @@ void ClientWindow::readyRead() {
         }
 	// Message d'un utilisateur
         else if(messageRegex.indexIn(line) != -1) {
+	    // Récupération du pseudo et du message
             QString user = messageRegex.cap(1);
             QString message = messageRegex.cap(2);
 	    
+	    // On affiche le message avec la couleur stocké pour l'utilisateur
 	    QString color = "<font color=\"" + user_colors[user] + "\">";
 	    QString end_color = "</font>";
             roomTextEdit->append(color + "<b>" + user + "</b>: " + message + end_color);

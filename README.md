@@ -24,6 +24,16 @@ Dans les deux dossiers effectués les commandes suivantes :
 ```
 ./client
 ```
+Vous obtenez ce visuel :
+![Image coté client](https://github.com/manu92/projetQT/blob/master/pageConnection.png)
+
+* Sélectionner votre image
+* Ecriver l'adresse IP de votre ordinateur (ex: 192.168.1.38)
+* Ecriver votre pseudo
+* Cliquer sur Connexion
 
 ## Résultat souhaité
-![Image of Chat]
+Côté serveur :
+![Image coté serveur](https://github.com/manu92/projetQT/blob/master/coteServeur.png)
+Côté client :
+![Image coté client](https://github.com/manu92/projetQT/blob/master/resultat.png)
